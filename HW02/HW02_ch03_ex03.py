@@ -40,16 +40,41 @@
 # Write your functions below:
 # Body
 
+def do_twice(f):
+    f()
+    f()
 
+def print_twice(v):
+    print(v)
+    print(v)
 
+def print_segment():
+	print('+','-','-','-','-', end=' ')
 
+def print_end():
+	print('+')
 
+def print_sides():
+	print('|',' ',' ',' ',' ', end=' ')
 
+def print_sideend():
+	print('|')
 
+def do_four(f):
+	do_twice(f)
+	do_twice(f)
 
+def print_full_side():
+	print('|',' ',' ',' ',' ','|',' ',' ',' ',' ','|',' ',' ',' ',' ','|',' ',' ',' ',' ',end=' ')
+	print('|')
 
+def print_horiz():
+	do_four(print_segment)
+	print_end()
 
-
+def print_block():
+	print_horiz()
+	do_four(print_full_side)
 
 # Write your functions above:
 ################################################################################
@@ -59,10 +84,8 @@ def main():
     two_by_two()
     four_by_four()
     """
-    print("Hello World!")
-    
-
-
+do_four(print_block)
+print_horiz()
 
 if __name__ == "__main__":
     main()

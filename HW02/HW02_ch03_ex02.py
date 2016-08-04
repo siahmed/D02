@@ -29,10 +29,19 @@
 # Write your functions below:
 # Body
 
+#2
+def do_twice(f,v):
+    f(v)
+    f(v)
 
+#3
+def print_twice(v):
+    print(v)
+    print(v)
 
-
-
+def do_four(f,v):
+	do_twice(f,v)
+	do_twice(f,v)
 
 
 # Write your functions above:
@@ -42,8 +51,8 @@ def main():
     When complete have one function call in this function:
     do_four(print_twice, [some_value])
     """
-    print("Hello World!")
-    
+    do_twice(print_twice,'spam')
+    do_four(print_twice,'spam')
 
 
 if __name__ == "__main__":
